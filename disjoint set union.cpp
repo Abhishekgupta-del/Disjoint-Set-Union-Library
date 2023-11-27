@@ -20,8 +20,8 @@ public:
     }
 
     void unionByRank(int u, int v) {
-        int ulp_u = findUPar(u); 
-        int ulp_v = findUPar(v); 
+        int ulp_u = findUPar(u); // It is the ultimate parent of u
+        int ulp_v = findUPar(v);  //It is the ultimate parent of v
         if(ulp_u == ulp_v) return; 
         if(rank[ulp_u] < rank[ulp_v]) {
             parent[ulp_u] = ulp_v; 
